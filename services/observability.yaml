@@ -1,0 +1,12 @@
+services:
+  prometheus:
+    image: prom/prometheus:v3.5.0
+    ports:
+      - 9090/9090
+    networks:
+      - lobobranco
+
+
+networks:
+  lobobranco:
+    driver: bridge
