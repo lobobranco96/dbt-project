@@ -1,1 +1,19 @@
-a
+services:
+  metabase:
+    image: metabase/metabase:v0.55.x  
+    container_name: metabase
+    environment:
+      - MB_DB_FILE=/metabase.db/metabase.db  
+    ports:
+      - "3000:3000"  
+    volumes:
+      - metabase-data:/metabase.db  
+    networks:
+      - astro_default
+
+volumes:
+  metabase-data:
+
+networks:
+  astro_default:
+    driver: bridge
