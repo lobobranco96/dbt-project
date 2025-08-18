@@ -39,10 +39,9 @@ services:
       done;
       echo 'MinIO está pronto. Iniciando configuração dos buckets.';
       mc mb myminio/raw;
-      mc mb myminio/processed;
-      echo 'Buckets criados com sucesso.';
+      echo 'Bucket criado com sucesso.';
       mc anonymous set public myminio/raw;
-      mc anonymous set public myminio/processed;
+
       echo 'Políticas de acesso definidas para público.';
       "
     environment:
