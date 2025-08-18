@@ -1,15 +1,16 @@
 # dbt-project
 
-utilizando: 
+### stack: 
 airflow(astronomer) -> orchestration
 dbt -> transformation + data quality check
 python -> script customizado para coleta e carregamento (csv > dw) // python astro sdk
 datalake -> minio[armazenamento de dados csv]
-dw -> armazenamento inicial com a tabela raw + formato scd type 2
+dw -> armazenamento inicial com a tabela raw 
 metabase -> data visualization
 prometheus + grafana -> observabilidade
 docker -> container
 
+```lua
 docker
  ├── prometheus + grafana [observabilidade]
  ├── airflow (astronomer) [orquestração]
@@ -18,6 +19,7 @@ docker
  ├── dw [raw, SCD Type 2]
  └── dbt [transformação+ SCD type2 + data quality]
  └── metabase [visualização de dados]
+ ```
 
 docker = localExecutor
 
