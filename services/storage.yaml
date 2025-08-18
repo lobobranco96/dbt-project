@@ -5,12 +5,8 @@ services:
     ports:
       - 9000:9000
       - 9001:9001
-    environment:
-      - MINIO_ROOT_USER=admin
-      - MINIO_ROOT_PASSWORD=password
-      - MINIO_DOMAIN=storage
-      - MINIO_REGION_NAME=us-east-1
-      - MINIO_REGION=us-east-1
+    env_file:
+      - conf/.credentials.conf
     command: server /data --console-address ":9001"
     volumes:
       - lake_minio_vol:/data
@@ -44,11 +40,8 @@ services:
 
       echo 'Políticas de acesso definidas para público.';
       "
-    environment:
-      - AWS_ACCESS_KEY_ID=admin
-      - AWS_SECRET_ACCESS_KEY=password
-      - AWS_REGION=us-east-1
-      - AWS_DEFAULT_REGION=us-east-1
+    env_file:
+      - conf/.credentials.conf
     networks:
       - astro_default
 
