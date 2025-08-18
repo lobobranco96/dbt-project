@@ -1,0 +1,18 @@
+global:
+  scrape_interval: 15s  # Frequência com que o Prometheus vai fazer scraping das métricas
+
+scrape_configs:
+  - job_name: 'prometheus'
+    static_configs:
+      - targets: ['localhost:9090']  # Monitorando o Prometheus
+
+  - job_name: 'airflow-webserver'
+    static_configs:
+      - targets: ['airflow-webserver:8080']  # Monitorando o Airflow Webserver
+    metrics_path: /metrics  # Caminho para acessar as métricas do Airflow
+    
+  - job_name: 'docker'
+    static_configs:
+      - targets: ['cadvisor:8080']  # Para cAdvisor, ou 'localhost:9323' para Docker daemon
+    metrics_path: /metrics
+    scheme: http
