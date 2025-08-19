@@ -5,14 +5,8 @@ scrape_configs:
   - job_name: 'prometheus'
     static_configs:
       - targets: ['localhost:9090']  # Monitorando o Prometheus
-
-  - job_name: 'airflow-webserver'
-    static_configs:
-      - targets: ['airflow-webserver:8080']  # Monitorando o Airflow Webserver
-    metrics_path: /metrics  # Caminho para acessar as métricas do Airflow
     
   - job_name: 'docker'
+    scrape_interval: 5s
     static_configs:
-      - targets: ['cadvisor:8080']  
-    metrics_path: /metrics
-    scheme: http
+      - targets: ['host.docker.internal:8081']  
