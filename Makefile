@@ -8,7 +8,7 @@ start_airflow:
 
 # Inicia os serviços de observabilidade (Prometheus, Grafana)
 start_observability:
-	docker compose -f services/observability.yaml up
+	docker compose -f services/observability.yaml up -d
 
 # Inicia serviços de visualização
 start_visualization:
