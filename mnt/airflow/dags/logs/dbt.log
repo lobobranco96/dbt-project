@@ -1,0 +1,31 @@
+[0m03:41:55.744882 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ffbe646a9c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ffbe6469d90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ffbe6469cd0>]}
+
+
+============================== 03:41:55.751356 | 95087c15-a521-4c7e-83f5-dd92b128f97e ==============================
+[0m03:41:55.751356 [info ] [MainThread]: Running with dbt=1.10.9
+[0m03:41:55.753539 [debug] [MainThread]: running dbt with arguments {'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'no_print': 'None', 'printer_width': '80', 'warn_error': 'None', 'log_cache_events': 'False', 'empty': 'None', 'target_path': 'None', 'partial_parse': 'True', 'write_json': 'True', 'debug': 'False', 'indirect_selection': 'eager', 'introspect': 'True', 'use_colors': 'True', 'static_parser': 'True', 'invocation_command': 'dbt init dbt', 'send_anonymous_usage_stats': 'True', 'log_path': 'logs', 'cache_selected_only': 'False', 'fail_fast': 'False', 'use_experimental_parser': 'False', 'quiet': 'False', 'version_check': 'True', 'profiles_dir': '/home/astro/.dbt', 'log_format': 'default'}
+[0m03:41:55.767793 [info ] [MainThread]: Creating dbt configuration folder at /home/astro/.dbt
+[0m03:42:09.097363 [debug] [MainThread]: Starter project path: /home/astro/.local/lib/python3.12/site-packages/dbt/include/starter_project
+[0m03:42:09.312535 [info ] [MainThread]: 
+Your new dbt project "dbt_project" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m03:42:09.313595 [info ] [MainThread]: Setting up your profile.
+[0m03:43:32.987727 [info ] [MainThread]: Profile dbt_project written to /home/astro/.dbt/profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m03:43:32.990734 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 97.35396, "process_in_blocks": "0", "process_kernel_time": 0.271573, "process_mem_max_rss": "107752", "process_out_blocks": "8", "process_user_time": 2.645329}
+[0m03:43:32.992142 [debug] [MainThread]: Command `dbt init` succeeded at 03:43:32.991880 after 97.36 seconds
+[0m03:43:32.993078 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ffbe5ddae40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ffbe5b9a480>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ffbe6243a40>]}
+[0m03:43:32.994017 [debug] [MainThread]: Flushing usage events
+[0m03:43:33.942116 [debug] [MainThread]: An error was encountered while trying to flush usage events
