@@ -5,7 +5,7 @@ services:
     volumes:
       - ../docker/prometheus/prometheus.yaml:/etc/prometheus/prometheus.yml
     ports:
-      - 9090/9090
+      - "9090:9090"
     networks:
       - astro_default
 
