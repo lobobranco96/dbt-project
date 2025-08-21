@@ -2,3 +2,4 @@
 requests
 astronomer-cosmos
 astro-sdk-python[postgres]
+boto3
