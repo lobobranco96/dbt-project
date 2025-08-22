@@ -10,3 +10,7 @@ scrape_configs:
     scrape_interval: 5s
     static_configs:
       - targets: ['host.docker.internal:8081']  
+  
+  - job_name: 'airflow'
+    static_configs:
+      - targets: ['airflow-webserver:8080']
